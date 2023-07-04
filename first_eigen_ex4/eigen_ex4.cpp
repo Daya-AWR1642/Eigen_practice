@@ -12,27 +12,22 @@ int main()
 	matrixA1.setZero();
 	cout<<"\n"<<matrixA1<<endl;
 
-	//defining a dynamic matrix, explicit declaration
-	//
-	Matrix <float,Dynamic,Dynamic> matrixB;
-
-	//defining a dymanic matrix, tydef declaration
-	//
-	MatrixXf matrixB1;
-
-	//Constructor, alloacate memory, but do not initialize 
-	MatrixXf matrixC(10,10);
-
-	//Assigning matrix entries
-	MatrixXf matrixC1(2,2);
-
+	MatrixXd matrixC1(2,2);
 	matrixC1(0,0) = 1;
 	matrixC1(0,1) = 2;
 	matrixC1(1,0) = 3;
 	matrixC1(1,1) = 4;
-
 	cout<<endl<<matrixC1<<endl;
 
-	return 0;
+	//fillining the matrix entries using the comma separated values
+	//
+	Matrix4f matrixD;
+	matrixD << 1,2,3,4,
+		5,6,7,8,
+		9,10,11,12,
+		13,14,15,16;
 
+	cout<<endl<<matrixD<<endl;
+
+	return 0;
 }
